@@ -1,5 +1,5 @@
 namespace :stylecheck do
-  desc 'stylecheck for ruby'
+  desc 'Stylecheck for ruby'
   task :ruby do
     sh 'bundle exec rubocop'
   end
