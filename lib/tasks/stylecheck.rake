@@ -6,6 +6,8 @@ namespace :stylecheck do
 
   desc "Copies default configs"
   task :init do
-    sh 'cp config/stylecheck/rubocop.yml Rails.root/config/stylecheck/rubocop.yml'
+    source = File.join(Gem.loaded_specs["stylecheck"].full_gem_path, "config/stylecheck", "rubocop.yml")
+    target = File.join(Rails.root.to_s, "config/stylecheck", "rubocop.yml")
+    Fileutils.cp_r source, target
   end
 end
