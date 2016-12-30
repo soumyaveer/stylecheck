@@ -8,6 +8,6 @@ namespace :stylecheck do
   task :init do
     source = File.join(Gem.loaded_specs["stylecheck"].full_gem_path, "config/stylecheck", "rubocop.yml")
     target = File.join(Rails.root.to_s, "config/stylecheck", "rubocop.yml")
-    Fileutils.cp_r source, target
+    FileUtils.cp_r source, target
   end
 end
