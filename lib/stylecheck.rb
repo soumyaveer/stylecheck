@@ -1,5 +1,4 @@
-require "stylecheck/version"
 
 module Stylecheck
-  # Your code goes here...
+  require 'stylecheck/railtie' if defined?(Rails)
 end

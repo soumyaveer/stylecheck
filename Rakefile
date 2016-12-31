@@ -1,6 +1,4 @@
-require "bundler/gem_tasks"
-require "rspec/core/rake_task"
+require 'bundler'
+require 'bundler/gem_tasks'
 
-RSpec::Core::RakeTask.new(:spec)
-
-task :default => :spec
+load 'lib/rake_tasks.rb'
