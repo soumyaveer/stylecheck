@@ -14,6 +14,6 @@ namespace :stylecheck do
 
   desc 'Stylecheck for scss'
   task :scss do
-    sh 'bundle exec scs-lint --config config/stylecheck/scss-lint.yml'
+    sh 'bundle exec scss-lint --config config/stylecheck/scss-lint.yml'
   end
 end
