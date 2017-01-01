@@ -22,5 +22,5 @@ namespace :stylecheck do
   end
 
   desc 'Stylecheck for ruby and scss'
-  task :all => [:ruby, :scss]
+  task all: [:ruby, :scss]
 end
