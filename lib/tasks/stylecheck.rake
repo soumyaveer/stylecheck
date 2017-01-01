@@ -1,14 +1,14 @@
 namespace :stylecheck do
   desc "Copies default configs"
   task :init do
-    ruby_source = File.join(Gem.loaded_specs["stylecheck"].full_gem_path, "config/stylecheck", "rubocop.yml")
-    target_dir = FileUtils.mkdir_p "./config/stylecheck"
-    ruby_target = File.join(target_dir, "rubocop.yml" )
-    FileUtils.cp_r ruby_source, ruby_target
+    default_rubocop_config_path = File.join(Gem.loaded_specs["stylecheck"].full_gem_path, "config/stylecheck", "rubocop.yml")
+    target_dir = FileUtils.mkdir_p("./config/stylecheck")
+    app_rubocop_config_path = File.join(target_dir, "rubocop.yml" )
+    FileUtils.cp_r(default_rubocop_config_path, app_rubocop_config_path)
 
-    scss_source = File.join(Gem.loaded_specs["stylecheck"].full_gem_path, "config/stylecheck", "scss-lint.yml")
-    scss_target = File.join(target_dir, "scss-lint.yml" )
-    FileUtils.cp_r scss_source, scss_target
+    default_scss_config_path = File.join(Gem.loaded_specs["stylecheck"].full_gem_path, "config/stylecheck", "scss-lint.yml")
+    app_scss_config_path = File.join(target_dir, "scss-lint.yml" )
+    FileUtils.cp_r(default_scss_config_path, app_scss_config_path)
   end
 
   desc 'Stylecheck for ruby'
@@ -22,5 +22,5 @@ namespace :stylecheck do
   end
 
   desc 'Stylecheck for ruby and scss'
-  task all: [:ruby, :scss]
+  task all: ['stylecheck:ruby', 'stylecheck:scss']
 end
