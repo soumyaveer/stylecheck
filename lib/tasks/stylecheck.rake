@@ -1,10 +1,14 @@
 namespace :stylecheck do
   desc "Copies default configs"
   task :init do
-    source = File.join(Gem.loaded_specs["stylecheck"].full_gem_path, "config/stylecheck", "rubocop.yml")
+    ruby_source = File.join(Gem.loaded_specs["stylecheck"].full_gem_path, "config/stylecheck", "rubocop.yml")
     target_dir = FileUtils.mkdir_p "./config/stylecheck"
-    target = File.join(target_dir, "rubocop.yml" )
-    FileUtils.cp_r source, target
+    ruby_target = File.join(target_dir, "rubocop.yml" )
+    FileUtils.cp_r ruby_source, ruby_target
+
+    scss_source = File.join(Gem.loaded_specs["stylecheck"].full_gem_path, "config/stylecheck", "scss-lint.yml")
+    scss_target = File.join(target_dir, "scss-lint.yml" )
+    FileUtils.cp_r scss_source, scss_target
   end
 
   desc 'Stylecheck for ruby'
