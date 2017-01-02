@@ -1,5 +1,5 @@
 # Stylecheck
-Simple to install and easy to use, `Stylecheck` automates the code styling error checks for `Ruby` and `Scss`.
+Runs the code style check on `Ruby` and `SCSS` files.
 
 ## Installation
 
@@ -19,31 +19,30 @@ Or install it yourself as:
 
 #### Configuration:
 
-Run the task to configure `rubocop.yml` and `scss-lint.yml`:
-
 ```ruby
 rake stylecheck:init
 ```
-Note: This is one time setup step after installation of the gem.
+This copies default `rubocop.yml`, `scss-lint.yml` to the app's `config/stylecheck` folder.
+Modifies them based on your project's convention
 
 ## Usage
 
 #### Ruby style errors:
-This task checks for ONLY `Ruby` style errors. It uses `rubocop.yml` file.
+Validates code style on `Ruby` files based on `config/stylecheck/rubocop.yml`
 
 ```ruby
 rake stylecheck:ruby
 ```
 
 #### Scss style errors:
-This task checks for ONLY `Scss` style errors. It uses `scss-lint.yml` file.
+Validates code style on `SCSS` files based on `config/stylecheck/scss-lint.yml`
 
 ```ruby
 rake stylecheck:scss
 ```
 
 #### Ruby and Scss style errors:
-This task checks the style errors in `Ruby` as well as `Scss` code.
+Validates code style for `Ruby` and `SCSS` files.
 
 ```ruby
 rake stylecheck
