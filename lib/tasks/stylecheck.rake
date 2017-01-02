@@ -1,7 +1,6 @@
 desc 'Stylecheck for ruby and scss'
 task stylecheck: 'stylecheck:all'
 
-
 namespace :stylecheck do
   desc "Copies default configs"
   task :init do
