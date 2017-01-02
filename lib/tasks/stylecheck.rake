@@ -1,3 +1,7 @@
+desc 'Stylecheck for ruby and scss'
+task stylecheck: 'stylecheck:all'
+
+
 namespace :stylecheck do
   desc "Copies default configs"
   task :init do
@@ -21,7 +25,6 @@ namespace :stylecheck do
     sh 'bundle exec scss-lint --config config/stylecheck/scss-lint.yml'
   end
 
-  desc 'Stylecheck for ruby and scss'
   task :all do
     failed_task = false
     %W[stylecheck:ruby stylecheck:scss].each do |task_name|
