@@ -22,5 +22,14 @@ namespace :stylecheck do
   end
 
   desc 'Stylecheck for ruby and scss'
-  task all: ['stylecheck:ruby', 'stylecheck:scss']
+  task :all do
+    %W[ruby scss].each do |task_name|
+      begin
+        Rake::Task[task_name].invoke
+
+      rescue => e
+        puts "Task #{ task_name } failed with message #{ e.message }"
+      end
+    end
+  end
 end
