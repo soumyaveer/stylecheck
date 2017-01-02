@@ -34,14 +34,14 @@ Validates code style on `Ruby` files based on `config/stylecheck/rubocop.yml`
 rake stylecheck:ruby
 ```
 
-#### Scss style errors:
+#### SCSS style errors:
 Validates code style on `SCSS` files based on `config/stylecheck/scss-lint.yml`
 
 ```ruby
 rake stylecheck:scss
 ```
 
-#### Ruby and Scss style errors:
+#### Ruby and SCSS style errors:
 Validates code style for `Ruby` and `SCSS` files.
 
 ```ruby
