@@ -1,5 +1,5 @@
 # Stylecheck
-Runs the code style check on `Ruby` and `SCSS` files.
+Runs code style check on `Ruby` and `SCSS` files.
 
 ## Installation
 
@@ -23,7 +23,7 @@ Or install it yourself as:
 rake stylecheck:init
 ```
 This copies default `rubocop.yml`, `scss-lint.yml` to the app's `config/stylecheck` folder.
-Modifies them based on your project's convention
+Modify them based on your project's convention
 
 ## Usage
 
