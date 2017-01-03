@@ -19,7 +19,7 @@ Or install it yourself as:
 
 #### Configuration:
 
-```ruby
+```bash
 rake stylecheck:init
 ```
 This copies default `rubocop.yml`, `scss-lint.yml` to the app's `config/stylecheck` folder.
@@ -30,20 +30,20 @@ Modify them based on your project's convention
 #### Ruby style errors:
 Validates code style on `Ruby` files based on `config/stylecheck/rubocop.yml`
 
-```ruby
+```bash
 rake stylecheck:ruby
 ```
 
 #### SCSS style errors:
 Validates code style on `SCSS` files based on `config/stylecheck/scss-lint.yml`
 
-```ruby
+```bash
 rake stylecheck:scss
 ```
 
 #### Ruby and SCSS style errors:
 Validates code style for `Ruby` and `SCSS` files.
 
-```ruby
+```bash
 rake stylecheck
 ```
