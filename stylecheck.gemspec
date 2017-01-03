@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Soumya Veer']
   spec.email         = ['veer.soumya@gmail.com']
 
-  spec.summary       = 'Automate stylecheck for ruby and scss.'
-  spec.description   = 'Code stylechek automation'
+  spec.summary       = 'Runs code style check on Ruby and SCSS files.'
+  spec.description   = 'Runs code style check on Ruby and SCSS files.'
   spec.homepage      = ''
   spec.license       = 'MIT'
 
