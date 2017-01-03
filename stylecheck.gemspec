@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Soumya Veer']
   spec.email         = ['veer.soumya@gmail.com']
 
-  spec.summary       = 'Code style check for Ruby and SCSS.'
+  spec.summary       = 'Runs code style check on Ruby and SCSS files.'
   spec.description   = 'Runs code style check on Ruby and SCSS files.'
   spec.homepage      = ''
   spec.license       = 'MIT'
